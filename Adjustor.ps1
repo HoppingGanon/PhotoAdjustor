@@ -22,7 +22,7 @@ function GPhoto-Adjust ([Switch]$HideDetails = $false) {
             Write-Host -NoNewline ' -> '
         }
     
-        # 作成日時と更新日時を出力
+        # 作成日時と更新日時をメタデータから変更する
         $pic.CreationTimeUtc = $json.creationTime.formatted.Replace(' UTC', '')
         $pic.LastWriteTimeUtc = $json.creationTime.formatted.Replace(' UTC', '')
     
